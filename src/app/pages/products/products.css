@@ -1,0 +1,142 @@
+/* Importación de tipografías estilo Country desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* ---- ESTILOS BASE Y CENTRADO DE LA PÁGINA ---- */
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f3f9; /* Mismo fondo blanco-morado suave */
+    font-family: 'Playfair Display', Georgia, serif;
+    padding: 20px;
+    box-sizing: border-box;
+    padding-top: 100px;
+}
+
+/* Contenedor principal de la sección de inventario */
+.table-section {
+    width: 100%;
+    max-width: 900px; /* Más ancho que el formulario para lucir la tabla */
+    display: flex;
+    justify-content: center;
+}
+
+/* ---- DISEÑO DE LA TARJETA (CARD) ---- */
+.card {
+    background: #ffffff;
+    border: 3px solid #6c4675; /* Borde Morado Country */
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 8px 8px 0px #ff85a2; /* Sombra sólida Rosa (para contrastar con la verde del registro) */
+    width: 100%;
+    text-align: center;
+}
+
+/* Título de la tabla */
+.card h2 {
+    font-family: 'Cherry Cream Soda', cursive; /* Letra Country llamativa */
+    color: #6c4675;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+/* Subtítulo informativo */
+.card-instruction {
+    color: #6c4675;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Contenedor responsivo por si la pantalla es pequeña */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 2px solid #6c4675; /* Marco morado para la tabla */
+}
+
+/* ---- DISEÑO DE LA TABLA PURE COUNTRY ---- */
+.makeup-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+/* Encabezados de la Tabla (Thead) */
+.makeup-table th {
+    font-family: 'Cherry Cream Soda', cursive;
+    background-color: #6c4675; /* Fondo Morado */
+    color: #b9fbc0; /* Texto Verde Country */
+    padding: 15px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Celdas de la Tabla (Tbody) */
+.makeup-table td {
+    padding: 14px 15px;
+    border-bottom: 2px solid #f0e6f2; /* Líneas divisorias moradas muy tenues */
+    color: #4a3b4e;
+    font-size: 1.05rem;
+}
+
+/* Filas alternas (Efecto cebra estilo rústico) */
+.makeup-table tbody tr:nth-child(even) {
+    background-color: #fffbfe; /* Un sutil toque rosa/blanco para alternar */
+}
+
+/* Efecto Hover en las filas */
+.makeup-table tbody tr:hover {
+    background-color: #f2fff4; /* Se ilumina en un verde muy suave al pasar el cursor */
+    transition: background-color 0.2s ease;
+}
+
+/* Destacar el nombre del producto */
+.product-title {
+    font-weight: 700;
+    color: #6c4675;
+}
+
+/* ---- DISEÑO DE BADGES (ETIQUETAS DE CATEGORÍA) ---- */
+.badge {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 0.85rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1.5px solid #6c4675;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Categoría Rostro - Color Verde */
+.badge.face {
+    background-color: #b9fbc0;
+    color: #2b5131;
+}
+
+/* Categoría Ojos - Color Rosa */
+.badge.eyes {
+    background-color: #ff85a2;
+    color: #ffffff;
+}
+
+/* Categoría Labios - Color Morado Suave */
+.badge.lips {
+    background-color: #e8dbec;
+    color: #6c4675;
+}
+
+/* Categoría Skincare - Blanco/Gris Elegante */
+.badge.skincare {
+    background-color: #ffffff;
+    color: #6c4675;
+}

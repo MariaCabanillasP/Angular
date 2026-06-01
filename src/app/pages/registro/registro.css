@@ -1,0 +1,142 @@
+/* Importación de tipografías estilo Country desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* ---- ESTILOS BASE Y CENTRADO DE LA PÁGINA ---- */
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f3f9; /* Un fondo blanco-morado muy suave */
+    font-family: 'Playfair Display', Georgia, serif; /* Letra estilo country elegante para el texto común */
+    padding: 20px;
+    box-sizing: border-box;
+    padding-top: 100px;
+}
+
+/* Contenedor principal de la sección del formulario */
+.form-section {
+    width: 100%;
+    max-width: 520px; /* Tamaño ideal para que se vea centrado y compacto */
+    display: flex;
+    justify-content: center;
+}
+
+/* ---- DISEÑO DE LA TARJETA (CARD) ---- */
+.card {
+    background: #ffffff;
+    border: 3px solid #6c4675; /* Borde Morado estilo Country */
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 8px 8px 0px #b9fbc0; /* Sombra sólida verde, estilo retro/country moderno */
+    width: 100%;
+    text-align: center;
+}
+
+/* Título Principal de la página */
+.card h2 {
+    font-family: 'Cherry Cream Soda', cursive; /* Tipografía Country llamativa */
+    color: #6c4675; /* Morado principal */
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+/* Instrucción o subtítulo */
+.card-instruction {
+    color: #ff85a2; /* Rosa */
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* ---- ELEMENTOS DEL FORMULARIO ---- */
+.makeup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaciado uniforme entre campos */
+    text-align: left; /* Alinea las etiquetas del formulario a la izquierda */
+}
+
+/* Grupos de control (Label + Input) */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Fila de dos columnas (Precio y Stock) */
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .col {
+    flex: 1;
+}
+
+/* Etiquetas (Labels) */
+.form-group label {
+    font-family: 'Cherry Cream Soda', cursive;
+    color: #6c4675; /* Morado */
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs y Selects */
+.form-group input, 
+.form-group select {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    padding: 12px 15px;
+    border: 2px solid #6c4675; /* Borde Morado */
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #4a3b4e;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Efecto Focus (Cuando el usuario hace clic para escribir) */
+.form-group input:focus, 
+.form-group select:focus {
+    border-color: #ff85a2; /* Cambia a Rosa */
+    box-shadow: 0 0 8px rgba(255, 133, 162, 0.4);
+    background-color: #fffbfd; /* Un sutil toque rosa de fondo */
+}
+
+/* Placeholder (Texto de ayuda gris dentro del input) */
+::placeholder {
+    color: #a396a6;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* ---- BOTÓN DE ENVÍO (MÁGICO) ---- */
+.btn-submit {
+    margin-top: 15px;
+    background-color: #b9fbc0; /* Fondo Verde */
+    color: #6c4675; /* Texto Morado */
+    font-family: 'Cherry Cream Soda', cursive;
+    font-size: 1.25rem;
+    padding: 14px;
+    border: 2px solid #6c4675; /* Borde Morado */
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 0px #6c4675; /* Efecto botón 3D country */
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+/* Efectos del Botón al pasar el mouse o hacer clic */
+.btn-submit:hover {
+    background-color: #ff85a2; /* Cambia a Rosa al pasar el mouse */
+    color: #ffffff; /* Texto pasa a blanco */
+    border-color: #6c4675;
+}
+
+.btn-submit:active {
+    transform: translateY(4px); /* Simula que el botón se hunde */
+    box-shadow: 0px 0px 0px transparent;
+}

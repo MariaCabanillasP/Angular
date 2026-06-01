@@ -1,0 +1,23 @@
+/* ---- ESTILOS PARA EL PIE DE PÁGINA (FOOTER) ---- */
+.minimal-footer {
+    width: 100%;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
+    background-color: transparent; /* No usa fondo de color para no llamar la atención */
+    margin-top: auto; /* Empuja el footer al fondo si usas un contenedor flex */
+}
+
+/* Estilo del texto interno */
+.minimal-footer p {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem; /* Letra pequeña */
+    color: #40004e; /* Gris con un sutil toque morado, muy discreto */
+    letter-spacing: 0.5px;
+    margin: 0;
+    font-style: italic;
+    opacity: 0.7; /* Le da un toque de transparencia para que sea aún menos llamativo */
+    text-align: center;
+}
