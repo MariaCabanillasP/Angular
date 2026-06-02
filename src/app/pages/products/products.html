@@ -18,21 +18,18 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td class="product-title">Base Fluida Matte</td>
-                <td>Bissú</td>
-                <td><span class="badge face">Rostro</span></td>
-                <td>$145.00</td>
-                <td>24 pzs</td>
+              <tr *ngFor="let item of listaProductos">
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.brand }}</td>
+                <td><span class="badge-categoria">{{ item.category }}</span></td>
+                <td>${{ item.price | number:'1.2-2' }}</td>
+                <td>{{ item.stock }} pzas</td>
               </tr>
-              <tr>
-                <td>2</td>
-                <td class="product-title">Paleta Glam Sombras</td>
-                <td>Ruby Rose</td>
-                <td><span class="badge eyes">Ojos</span></td>
-                <td>$320.00</td>
-                <td>12 pzs</td>
+              <tr *ngIf="listaProductos.length === 0">
+                <td colspan="6" style="text-align: center; color: #888; padding: 20px;">
+                  No hay cosméticos registrados en el inventario.
+                </td>
               </tr>
             </tbody>
           </table>
