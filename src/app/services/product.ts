@@ -19,7 +19,7 @@ export interface Product {
 })
 export class ProductService {
   
-  // La URL del microservicio de Laravel (Ajusta el puerto :8000 si tus corchetes [] abrieron ahí)
+  // La URL del microservicio de Laravel 
   private apiUrl = 'http://localhost/api/products';
 
   constructor(private http: HttpClient) { }

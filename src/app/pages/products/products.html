@@ -18,7 +18,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let item of listaProductos">
+              <tr *ngFor="let item of listaProductos()">
                 <td>{{ item.id }}</td>
                 <td>{{ item.name }}</td>
                 <td>{{ item.brand }}</td>
@@ -26,7 +26,7 @@
                 <td>${{ item.price | number:'1.2-2' }}</td>
                 <td>{{ item.stock }} pzas</td>
               </tr>
-              <tr *ngIf="listaProductos.length === 0">
+              <tr *ngIf="listaProductos().length === 0">
                 <td colspan="6" style="text-align: center; color: #888; padding: 20px;">
                   No hay cosméticos registrados en el inventario.
                 </td>

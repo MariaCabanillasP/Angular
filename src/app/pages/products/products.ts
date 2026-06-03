@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common'; // <-- Vital para usar *ngFor
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal, WritableSignal } from '@angular/core';
 import { Product, ProductService } from '../../services/product';
 
 @Component({
@@ -10,7 +10,7 @@ import { Product, ProductService } from '../../services/product';
 })
 export class Products implements OnInit {
   // Aquí guardaremos la lista de cosméticos que nos devuelva Laravel
-  listaProductos: Product[] = [];
+  listaProductos: WritableSignal<Product[]> = signal<Product[]>([]);
 
   constructor(private productService: ProductService) {}
 
@@ -22,7 +22,7 @@ export class Products implements OnInit {
   cargarInventario(): void {
     this.productService.getProducts().subscribe({
       next: (datos) => {
-        this.listaProductos = datos; // Guardamos los cosméticos en nuestra variable
+        this.listaProductos.set(datos); // Guardamos los cosméticos en nuestra variable
       },
       error: (err) => {
         console.error(err);
